@@ -13,7 +13,7 @@ purchase = pd.read_csv('purchase.csv',
 visits_cart = pd.merge(visits, cart, how = 'left')
 visits_cart_rows = len(visits_cart)
 null_cart_times = len(visits_cart[visits_cart.cart_time.isnull()])
-print(float(null_cart_times) / visits_cart_rows)
+print(float(null_cart_times) / visits_cart_rows) #一定要float！
 
 # cart-checkout
 cart_checkout = pd.merge(cart, checkout, how = 'left')
